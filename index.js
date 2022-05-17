@@ -5,7 +5,7 @@ const axios = require("axios");
 
 const app = express();
 app.use(cors());
-mongoose.connect('mongodb://localhost:27017/users_marvel');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/users_marvel');
 require ("dotenv").config()
 
 
